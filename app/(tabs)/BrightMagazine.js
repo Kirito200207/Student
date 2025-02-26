@@ -1,33 +1,29 @@
-import { Image, StyleSheet, Text, View, ScrollView } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
-export default function HomeScreen() {
+const BrightMagazine = () => {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      {/* 标题 */}
+    <View style={styles.container}>
       <Text style={styles.header}>Журнал Bright</Text>
       <Text style={styles.subHeader}>Новости</Text>
 
-      {/* 文章标题 */}
       <Text style={styles.title}>Превращаем стресс в своего помощника</Text>
 
-      {/* 图片 */}
       <Image
-        source={{ uri: 'http://brightmagazine.ru/wp-content/uploads/2020/11/pexels-andrea-piacquadio-3839098.jpg' }} // 替换为实际图片URL
+        source={{ uri: 'https://via.placeholder.com/300' }} // 你可以替换为实际图片URL
         style={styles.image}
       />
 
-      {/* 正文 */}
       <Text style={styles.content}>
         Исследователи Йельского университета заявляют, что люди, которые рассматривают стресс, как возможность личностного роста, отмечают улучшение качества жизни. Сегодня узнаем, как это работает и как увидеть положительные стороны стресса.
       </Text>
 
-      {/* 阅读更多按钮 */}
       <View style={styles.buttonContainer}>
         <Text style={styles.buttonText}>Читать далее</Text>
       </View>
-    </ScrollView>
+    </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -43,7 +39,7 @@ const styles = StyleSheet.create({
   },
   subHeader: {
     fontSize: 18,
-    color: 'blue',
+    color: '#666',
     marginBottom: 20,
   },
   title: {
@@ -76,3 +72,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
+export default BrightMagazine;
