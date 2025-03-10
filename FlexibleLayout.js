@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
-import { Slot } from 'expo-router';
 
 const FlexibleLayout = () => {
   return (
@@ -28,9 +27,6 @@ const FlexibleLayout = () => {
           color="#007BFF"
         />
       </View>
-
-      {/* Expo Router 的 Slot 组件 */}
-      <Slot />
     </ScrollView>
   );
 };
